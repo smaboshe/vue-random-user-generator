@@ -12,13 +12,17 @@
 <body>
   <div id="app">
     <img
+      :class="gender"
       :src="picture"
       :alt="`Photo of ${firstName} ${lastName}`"
       :title="`Photo of ${firstName} ${lastName}`"
     />
     <h1>{{firstName}} {{lastName}}</h1>
     <h3>Email: {{email}}</h3>
-    <button>Get Random User</button>
+    <button
+      :class="gender"
+      v-on:click="getUser()"
+    >Get Random User</button>
   </div>
 
   <script src="https://unpkg.com/vue@next"></script>
