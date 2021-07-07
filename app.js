@@ -5,14 +5,18 @@ const app  = Vue.createApp({
       lastName: 'Banda',
       email: 'andrew.banda@example.com',
       gender: 'male',
-      picture: 'https://randomuser.me/api/portraits/men/91.jpg',
+      picture: 'https://randomuser.me/api/portraits/men/91.jpg'
     }
   },
   methods: {
     getUser() {
-      console.log(this.firstName);
-    }
-  }
+      this.firstName = 'Thandiwe',
+      this.lastName = 'Zulu',
+      this.email = 'thandiwe.zulu@example.com',
+      this.gender = 'female',
+      this.picture = 'https://randomuser.me/api/portraits/women/91.jpg'
+    },
+  },
 })
 
 app.mount('#app')
